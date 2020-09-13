@@ -7,10 +7,11 @@ export const removeCard = (
   cardToRemove: Card,
 ) => {
   const newCards = store.state.cards.filter(
-    (card) => card.value !== cardToRemove.value,
+    card => card.value !== cardToRemove.value,
   );
 
   store.setState({
+    ...store.state,
     cards: newCards,
   });
 };

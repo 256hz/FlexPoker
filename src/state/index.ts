@@ -9,6 +9,7 @@ export interface Card {
 }
 
 export type State = {
+  chosenCard: Card;
   cards: Card[];
 };
 
@@ -73,6 +74,7 @@ const defaultCards: Card[] = [
 
 export const initialState = {
   cards: defaultCards,
+  chosenCard: defaultCards[0],
 };
 
 // Paste the following into your code to use global state & actions:

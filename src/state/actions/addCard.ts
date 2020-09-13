@@ -6,6 +6,7 @@ export const addCard = (store: Store<State, Actions>, newCard: Card) => {
   const newCards = [...store.state.cards, newCard];
 
   store.setState({
+    ...store.state,
     cards: newCards.sort((a, b) => a.value - b.value),
   });
 };
